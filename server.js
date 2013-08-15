@@ -5,4 +5,5 @@ var server = http.createServer(function(req, res) {
     res.end("Congrats! You're being listened to on port " + process.env.PORT);
 });
 
-server.listen(process.env.PORT || 5000);
+//server.listen(process.env.PORT || 5000);
+server.listen(5000);
