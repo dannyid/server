@@ -5,4 +5,4 @@ var server = http.createServer(function(req, res) {
     res.end("Congrats! You're being listened to on port 80.");
 });
 
-server.listen(80);
+server.listen(process.env.PORT || 5000);
