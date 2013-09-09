@@ -2,8 +2,7 @@ var http = require( 'http' );
 
 var server = http.createServer( function( req, res ) {
     res.writeHead( 200 );
-    res.write(./index.html);
-    res.end();
+    res.end(./index.html);
 //    res.end( "Congrats! You're being listened to on port " + process.env.PORT );
 });
 
