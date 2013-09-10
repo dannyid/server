@@ -16,9 +16,6 @@ var server = http.createServer(function(req, res) {
             res.end();
         } else if (!err && queryData.name && queryData.message) {
             
-//            res.write("Hey, " + queryData.name + ", I'm going to send Danny a text from you that says: " + queryData.message + '"');
-//            res.end();
-            
             var message = queryData.name + ': '  + queryData.message;
 
             client.sendSms({
@@ -29,7 +26,7 @@ var server = http.createServer(function(req, res) {
                 //this function is executed when a response is received from Twilio
                 
                 if (!err) {
-                    res.write("Hey, " + queryData.name + ", I just sent Danny a text from you that says: " + queryData.message + '"');
+                    res.write("Hey, " + queryData.name + ', I just sent Danny a text from you that says: "' + queryData.message + '"');
                     res.end();
                 };
             })
