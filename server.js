@@ -14,6 +14,9 @@ var server = http.createServer(function(req, res) {
             //res.write(data.toString());
             res.write("Hey, " + queryData.name + ", don't forget to leave a message!");
             res.end();
+        } else if (!err && queryData.message && !queryData.name) {
+            res.write("Hey, don't forget to leave your name!");
+            res.end();
         } else if (!err && queryData.name && queryData.message) {
             
             var message = queryData.name + ': '  + queryData.message;
