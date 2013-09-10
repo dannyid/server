@@ -16,13 +16,15 @@ var server = http.createServer(function(req, res) {
             res.end();
         } else if (!err && queryData.name && queryData.message) {
             
-            res.write("Hey, " + queryData.name + ", I'm going to send Danny a text from you that says: " + queryData.message + '"');
-            res.end();
+//            res.write("Hey, " + queryData.name + ", I'm going to send Danny a text from you that says: " + queryData.message + '"');
+//            res.end();
             
+            var message = queryData.name + ': '  + queryData.message;
+
             client.sendSms({
                 to:'+13012334339', // Any number Twilio can deliver to
                 from: '+12408216255', // A number you bought from Twilio and can use for outbound communication
-                body: queryData.name + ': '  + queryData.message // body of the SMS message
+                body: message // body of the SMS message
             }, function(err, responseData) { 
                 //this function is executed when a response is received from Twilio
                 
