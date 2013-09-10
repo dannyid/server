@@ -10,6 +10,7 @@
   "license": "BSD",
   "dependencies": {
     "express": "~3.3.5",
-    "coffee-script": "~1.6.3"
+    "coffee-script": "~1.6.3",
+    "twilio": "~1.1.4"
   }
 }
