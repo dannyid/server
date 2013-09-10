@@ -31,7 +31,7 @@ var server = http.createServer(function(req, res) {
                 };
             })
         } else {
-            res.write("You didn't tell me your name, your jerk!");
+            res.write("Want to send me a message? Add your name and message to the URL and DO IT. Example: fast-river-7698.herokuapp.com/?name=Danny&message=Hello-friend");
             res.end();
         }
     });
