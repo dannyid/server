@@ -8,8 +8,9 @@ var server = http.createServer(function(req, res) {
     res.statusCode = 200;
 
     fs.readFile('index.html', function(err, data) {
-        if (!err && queryData.name === "Danny")  {
-            res.write(data.toString());
+        if (!err && queryData.name)  {
+            //res.write(data.toString());
+            res.write("Hello, " + queryData.name + ". I'm smart and know your name.");
             res.end();
         }
     });
