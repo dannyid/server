@@ -31,7 +31,8 @@ var server = http.createServer(function(req, res) {
                 if (!err) {
                     res.write("Danny received your txt. Thank you.");
                     res.end();
-                });
+                };
+            })
         } else {
             res.write("You didn't tell me your name, your jerk!");
             res.end();
