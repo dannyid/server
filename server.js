@@ -12,6 +12,9 @@ var server = http.createServer(function(req, res) {
             //res.write(data.toString());
             res.write("Hello, " + queryData.name + ". I'm smart and know your name.");
             res.end();
+        } else {
+            res.write("You didn't tell me your name, your jerk!");
+            res.end();
         }
     });
 
