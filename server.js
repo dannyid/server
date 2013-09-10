@@ -12,7 +12,7 @@ var server = http.createServer(function(req, res) {
     fs.readFile('index.html', function(err, data) {
         if (!err && queryData.name && !queryData.message)  {
             //res.write(data.toString());
-            res.write("Hey, <b>" + queryData.name + "</b>, don't forget to leave a message!");
+            res.write("Hey, " + queryData.name + ", don't forget to leave a message!");
             res.end();
         } else if (!err && queryData.message && !queryData.name) {
             res.write("Hey, don't forget to leave your name!");
