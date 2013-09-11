@@ -34,7 +34,8 @@ var server = http.createServer(function(req, res) {
                 };
             })
         } else {
-            res.write("Want to send me a message? Add your name and message to the URL and DO IT.\n\nExample:\n\nhttp://txt-me.dannyid.com/?name=Bobby&message=Hello-friend");
+//            res.write("Want to send me a message? Add your name and message to the URL and DO IT.\n\nExample:\n\nhttp://txt-me.dannyid.com/?name=Bobby&message=Hello-friend");
+            res.write(data.toString());
             res.end();
         }
     });

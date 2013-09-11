@@ -1,0 +1,32 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+input {
+    margin: 5px;
+    background-color: darkslategray;
+    border: none; 
+    width: 500;
+    height: 50px;
+    opacity: 0.5;
+    color: black;
+    font-size: 2em;
+    align: ;
+}
+
+input#message {
+    height: 150px;
+}
+
+input#submit {
+    background-color: #213737;
+    color: lightsalmon;
+}
+
+::-webkit-input-placeholder {color: #CCCCCC;}
+:-moz-placeholder {color: #CCCCCC;}
+::-moz-placeholder {color: #CCCCCC;}
+:-ms-input-placeholder {color: #CCCCCC;}
