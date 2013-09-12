@@ -28,7 +28,7 @@ var server = http.createServer(function(req, res) {
             }, function(err, responseData) { 
                 //this function is executed when a response is received from Twilio
                 
-                if (!err && queryData.name === "krista") {
+                if (!err && (queryData.name == "krista" || queryData.name == "krista moon")) {
                     res.write("Hello, Krista, my baby. Thank you so much for your message, baby.");
                     res.end();
                 } else if (!err) {
