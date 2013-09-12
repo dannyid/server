@@ -28,9 +28,13 @@ var server = http.createServer(function(req, res) {
             }, function(err, responseData) { 
                 //this function is executed when a response is received from Twilio
                 
-                if (!err) {
+                if (!err && queryData.name === "krista") {
+                    res.write("Hello, Krista, my baby. Thank you so much for your message, baby.");
+                    res.end();
+                } else if (!err) {
                     res.write("Hey, " + queryData.name + ', I just sent Danny a text from you that says: "' + queryData.message + '"');
                     res.end();
+                    
                 };
             })
         } else {

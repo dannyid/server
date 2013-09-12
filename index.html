@@ -6,16 +6,35 @@
         <style>
             body {
                 background-color: #DDDDDD;
+                font-family: sans-serif;
+                width: 100%;
+                height: auto;
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                position: absolute;
+            }
+
+            div.center {
+                width: 200px;
+                height: 400px; 
+                top: 50%;
+                left: 50%;
+                margin-top: -200px;
+                margin-left: -100px;
+                margin: 3px;
             }
 
             input {
                 margin: 3px;
-                padding: 5px;
+                padding: 5px; 
                 border: 0;
+                color: #555;
+                font-style: oblique;
             }
 
             input#name, input#message {
-                width: 200;
+                width: 200px;
             }
 
             input#message {
@@ -31,11 +50,16 @@
     </head>
 
     <body>
-        <form action="" method="get" target="_self">
-            <input id="name" placeholder="who are you?" name="name" type="text"><br>
+        <div class="center">
+            <div>
+                hi, send me a txt:
+            </div>
+            <form action="" method="get" target="_self">
+                <input id="name" placeholder="who are you?" name="name" type="text" autofocus="yes"><br>
             <input id="message" placeholder="what would you like to say?" name="message" type="text"><br>
             <input id="submit" type="submit" value="txt me" />
         </form>
+        </div>
     </body>
     <script>
 
