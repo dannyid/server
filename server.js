@@ -1,11 +1,8 @@
 var fs = require('fs');
 var http = require('http');
 var url = require('url');
-var keys = require('./keys.json');
 
-console.log(keys)
-
-var client = require('twilio')(keys.SID, keys.authToken);
+var client = require('twilio')(process.env.SID, process.env.AUTH_TOKEN);
 
 
 var server = http.createServer(function(req, res) {
@@ -26,8 +23,8 @@ var server = http.createServer(function(req, res) {
             var message = queryData.name + ': '  + queryData.message;
 
             client.sendSms({
-                to: keys.myPhoneNum, // Any number Twilio can deliver to
-                from: keys.twilioPhoneNum, // A number you bought from Twilio and can use for outbound communication
+                to: process.env.MY_PHONE_NUM, // Any number Twilio can deliver to
+                from: process.env.TWILIO_PHONE_NUM, // A number you bought from Twilio and can use for outbound communication
                 body: message // body of the SMS message
             }, function(err, responseData) { 
                 //this function is executed when a response is received from Twilio
