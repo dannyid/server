@@ -22,7 +22,7 @@ var server = http.createServer(function(req, res) {
             
             var message = queryData.name + ': '  + queryData.message;
 
-            client.sendSms({
+            client.sms.messages.create({
                 to: process.env.MY_PHONE_NUM, // Any number Twilio can deliver to
                 from: process.env.TWILIO_PHONE_NUM, // A number you bought from Twilio and can use for outbound communication
                 body: message // body of the SMS message
